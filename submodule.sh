@@ -10,8 +10,9 @@ if [ $answer = 1 ] || [ $answer = 2 ] || [ $answer = 3 ]
 then
     if [ $answer = 1 ]
     then
+        git pull
 
-        git submodule update --remote $link
+        git submodule update --remote
 
         git add .
 
@@ -44,7 +45,7 @@ then
 
         git push
 
-        cd ./
+        cd ../
 
         git add .
 
@@ -53,5 +54,5 @@ then
         git push
     fi
 else
-    echo "Invalid entry $answer"
+    echo "$answer Invalid entry "
 fi
